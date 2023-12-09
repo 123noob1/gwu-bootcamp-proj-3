@@ -1,6 +1,5 @@
 # Import dependencies
 from flask import Blueprint, render_template
-from .db_config import connect
 
 # Set up the Blueprint for Flask application
 views = Blueprint('views', __name__)
