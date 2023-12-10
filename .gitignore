@@ -6,9 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
-# API key & db_config
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# API key
+website\jupyter\api_key.py
 api_key.py
-db_config.py
 
 # Distribution / packaging
 .Python
@@ -162,3 +165,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+website/jupyter/api_key.py
