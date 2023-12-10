@@ -56,10 +56,15 @@ function setShopInfo(shopName) {
     });
 };
 
+// Function for plotting the charts
+function setPlots(shopName) {
+    // Codes go here
+};
+
 // When the dropdown selection changes
 function optionChanged(shopName) {
     setShopInfo(shopName);
-    // setPlots(shopId);
+    // setPlots(shopName);
 };
 
 // Starter/init function
