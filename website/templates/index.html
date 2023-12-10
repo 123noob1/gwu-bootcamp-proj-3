@@ -2,29 +2,52 @@
 {% block title %}Home page{% endblock %}
 
 {% block content %}
-<div class="row" style="margin-top: 10px;">
-    <div class="col-md-12 p-1 text-body-secondary">
-        <p><h1 align="center">Main Title Goes Here</h1></p>
+<div class="row">
+    <div class="col-md-12 p-1 col-md-12 jumbotron text-center" style="border-bottom: 1px solid rgb(206, 206, 206); background-color: #e3f2fd;">
+        <p><h1>Main Title Goes Here</h1></p>
         <h4 align="center">By....</h4>
-        <hr/>
     </div>
-</div>
+</div><br/>
 <div class="row">
     <div class="col-md-2">  
-        <div class="p-1 text-body-secondary" style="margin-left: 10px;background-color: white; border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
-            <p><h6>Select a Coffee Chain:</h6></p>
-            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        <div class="panel panel-primary" style="border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
+            <div class="panel-heading" style="background-color: #e3f2fd;">
+                <h6 class="panel-title" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
+            </div>
+            <center>
+                <select id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
+            </center>
         </div>
         <br/>
-        <div class="p-1 text-body-secondary" style="margin-left: 10px;background-color: white; border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
-            <p>For Overview info</p>
+        <div class="panel panel-primary" style="border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
+            <div class="panel-heading" style="background-color: #e3f2fd;">
+                <h6 class="panel-title" align="center" style="font-weight: bold; padding: 10px;">Overall Shop Info</h6>
+            </div>
+            <table class="table table-hover" style="font-size: small;">
+                <tr>
+                    <td><b>Shops Found</b></td>
+                    <td id="shops-found" align="right">100</td>
+                </tr>
+                <tr>
+                    <td><b>Review Counts</b></td>
+                    <td id="review-counts" align="right">100</td>
+                </tr>
+                <tr>
+                    <td><b>Average Rating</b></td>
+                    <td id="average-rating" align="right">3.5</td>
+                </tr>
+                <tr>
+                    <td><b>Average Price</b></td>
+                    <td id="average-price" align="right">$$$</td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class="col-md-4" style="margin-left: 35px; border:1px solid black;">
+    <div class="col-md-4" style="margin-left: 35px;">
         <div id="bar1"></div>
     </div>
     <div class="col-md-1"></div>
-    <div class="col-md-4" style="margin-left: 35px; border:1px solid black;">
+    <div class="col-md-4" style="margin-left: 35px;">
         <div id="bar2"></div>
     </div>
 

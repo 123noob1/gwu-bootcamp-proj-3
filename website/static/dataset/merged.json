@@ -1370,7 +1370,7 @@
     {
         "id":"7XU6Ie4gTzp_nmvXtX6xfw",
         "name":"Starbucks",
-        "review_count":89,
+        "review_count":88,
         "rating":3.5,
         "price":"$$",
         "price_point":2,
@@ -3492,6 +3492,24 @@
         "longitude":-73.98755
     },
     {
+        "id":"WP78R4bbejX29FZmObdLAw",
+        "name":"Gregorys Coffee",
+        "review_count":13,
+        "rating":3.5,
+        "price":"",
+        "price_point":0,
+        "display_phone":"(877) 292-3548",
+        "address1":"200 Varick St",
+        "address2":"",
+        "address3":"",
+        "city":"New York",
+        "state":"NY",
+        "zip":"10014",
+        "country":"US",
+        "latitude":40.728,
+        "longitude":-74.00521
+    },
+    {
         "id":"ejZjFbR_Z3He5pi699eJKg",
         "name":"Birch Coffee",
         "review_count":86,
@@ -3679,14 +3697,14 @@
         "price":"",
         "price_point":0,
         "display_phone":"(212) 686-1444",
-        "address1":"200 Broadway",
+        "address1":"240 E 54th St",
         "address2":"",
-        "address3":"Fulton Center",
+        "address3":"",
         "city":"New York",
         "state":"NY",
-        "zip":"10038",
+        "zip":"10022",
         "country":"US",
-        "latitude":40.710445,
-        "longitude":-74.008946
+        "latitude":40.7574700633,
+        "longitude":-73.9674983309
     }
 ]
