@@ -31,25 +31,18 @@ def get_db_result():
     # Import the required libraries to look into the sqlite database
     from flask import Response
     from sqlalchemy import create_engine
-    # from sqlalchemy.orm import Session
     import pandas as pd
 
     # Db path and query to pull data from
     db = 'website\coffee_chains.sqlite'
-    # qry = text('SELECT * FROM shops')
 
     # Create the engine and connection to the database
     engine = create_engine(f'sqlite:///{db}')
     conn = engine.connect()
-    # session = Session(bind = engine)
-    # data = session.execute(qry).fetchall()
-    # session.close_all()
-    # engine.dispose()
-    # print(Base.metadata.tables.keys())
 
     # Query all the data from the shop table in the database
     data = pd.read_sql('SELECT * FROM shops', conn).to_json(orient = 'records')
-    # print(data)
+    
     # Close out of the engine
     engine.dispose()
 
