@@ -47,7 +47,7 @@
                     <span class="navbar-toggler-icon glyphicon glyphicon-option-vertical"></span>
                     <a class="navbar-brand mb-0 h1 p-2 text-body-primary" href="#">PROJECT 3</a>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarProject">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarProject">
                     <div class="navbar-nav">
                         <a class="nav-link p-2 text-body-primary" aria-current="page" href="/">Home</a>
                         <a class="nav-link p-2 text-body-primary" aria-current="page" href="/map">Map</a>
@@ -56,12 +56,8 @@
             </div>
         </nav>
 
-        <div 
-            class="container-lg border border-body border-info rounded" 
-            style="margin-top: 10px; background-color: white;">
-            {% block content %}
-            {% endblock %}
-        </div>
+        {% block content %}
+        {% endblock %}
 
         <!-- Our Javascript files -->
         <script type="text/javascript" src="../static/js/data.js"></script>

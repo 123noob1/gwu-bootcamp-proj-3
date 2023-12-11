@@ -2,63 +2,86 @@
 {% block title %}Home page{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12 p-1 col-md-12 jumbotron text-center border-bottom" style="background-color: #e3f2fd;">
-        <p><h1>Main Title Goes Here</h1></p>
-        <h4 align="center">By....</h4>
-    </div>
-</div><br/>
-<div class="row">
-    <div class="col-md-2">  
-        <div class="panel panel-primary border border-info rounded">
-            <div class="panel-heading" style="background-color: #e3f2fd;">
-                <h6 class="panel-title rounded" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
-            </div>
-            <center>
-                <select class="border" id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
-            </center>
+<div 
+    class="container-lg border border-body border-primary rounded" 
+    style="margin-top: 10px; background-color: white;"
+>
+    <div class="row">
+        <div class="col-md-12 p-1 col-md-12 jumbotron text-center border-bottom border-info" style="background-color: #e3f2fd;">
+            <p><h1>Main Title Goes Here</h1></p>
         </div>
-        <br/>
-        <div class="panel panel-primary border border-info rounded">
-            <div class="panel-heading" style="background-color: #e3f2fd;">
-                <h6 class="panel-title" align="center" style="font-weight: bold; padding: 10px;">Overall Shop Info</h6>
+    </div><br/>
+    <div class="row">
+        <div class="col-md-2">  
+            <div class="panel panel-primary border border-info rounded">
+                <div class="panel-heading" style="background-color: #e3f2fd;">
+                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
+                </div>
+                <center>
+                    <select class="border" id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
+                </center>
             </div>
-            <table class="table table-hover" style="font-size: small;">
-                <tr>
-                    <td><b>Shops Found</b></td>
-                    <td id="shops-found" align="right">100</td>
-                </tr>
-                <tr>
-                    <td><b>Review Counts</b></td>
-                    <td id="review-counts" align="right">100</td>
-                </tr>
-                <tr>
-                    <td><b>Average Rating</b></td>
-                    <td id="average-rating" align="right">3.5</td>
-                </tr>
-                <tr>
-                    <td><b>Average Price</b></td>
-                    <td id="average-price" align="right">$$$</td>
-                </tr>
-            </table>
+            <br/>
+            <div class="panel panel-primary border border-info rounded">
+                <div class="panel-heading" style="background-color: #e3f2fd;">
+                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold; padding: 10px;">Overall Shop Info</h6>
+                </div>
+                <table class="table table-hover table-borderless" style="font-size: small;">
+                    <tr>
+                        <td><b>Shops Found</b></td>
+                        <td id="shops-found" align="right">100</td>
+                    </tr>
+                    <tr>
+                        <td><b>Review Counts</b></td>
+                        <td id="review-counts" align="right">100</td>
+                    </tr>
+                    <tr>
+                        <td><b>Average Rating</b></td>
+                        <td id="average-rating" align="right">3.5</td>
+                    </tr>
+                    <tr>
+                        <td><b>Average Price</b></td>
+                        <td id="average-price" align="right">$$$</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4" style="margin-left: 35px;">
-        <div id="bar1"></div>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-4" style="margin-left: 35px;">
-        <div id="bar2"></div>
-    </div>
+        <div class="col-md-4" style="margin-left: 35px;">
+            <div id="bar1"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4" style="margin-left: 35px;">
+            <div id="bar2"></div>
+        </div>
 
-    <div class="col-md-12">
-        <hr/>
-        <div class="row">
-            <div class="col-md-12" align="center">
-                <div id="map1"></div>
+        <div class="col-md-12">
+            <hr/>
+            <div class="row">
+                <div class="col-md-12" align="center">
+                    <div id="map1"></div>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+<div 
+    class="container-lg border border-body border-primary rounded text-center text-muted" 
+    style="margin-top: 10px; padding: 5px; font-size: small; background-color: white;"
+>
+    Project 3 Team - 
+    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/drkrenn" target="_blank">
+        Dan Krenn
+    </a> | 
+    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/123noob1" target="_blank">
+        Khang Ngo
+    </a> | 
+    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/rrrrasha" target="_blank">
+        Rasha Abdalla
+    </a> | 
+    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/yoerisamwel" target="_blank">
+        Yoeri Samwel
+    </a>
 </div>
 {% endblock %}
 
