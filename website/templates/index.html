@@ -3,23 +3,23 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-12 p-1 col-md-12 jumbotron text-center" style="border-bottom: 1px solid rgb(206, 206, 206); background-color: #e3f2fd;">
+    <div class="col-md-12 p-1 col-md-12 jumbotron text-center border-bottom" style="background-color: #e3f2fd;">
         <p><h1>Main Title Goes Here</h1></p>
         <h4 align="center">By....</h4>
     </div>
 </div><br/>
 <div class="row">
     <div class="col-md-2">  
-        <div class="panel panel-primary" style="border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
+        <div class="panel panel-primary border border-info rounded">
             <div class="panel-heading" style="background-color: #e3f2fd;">
-                <h6 class="panel-title" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
+                <h6 class="panel-title rounded" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
             </div>
             <center>
-                <select id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
+                <select class="border" id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
             </center>
         </div>
         <br/>
-        <div class="panel panel-primary" style="border-radius: 5px; border: 1px solid rgb(206, 206, 206);">
+        <div class="panel panel-primary border border-info rounded">
             <div class="panel-heading" style="background-color: #e3f2fd;">
                 <h6 class="panel-title" align="center" style="font-weight: bold; padding: 10px;">Overall Shop Info</h6>
             </div>

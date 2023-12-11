@@ -200,7 +200,7 @@
     {
         "id":"Ftrk-Rx1i3okzxnQNuLcnw",
         "name":"Starbucks",
-        "review_count":96,
+        "review_count":95,
         "rating":2.5,
         "price":"$$",
         "price_point":2,
@@ -308,7 +308,7 @@
     {
         "id":"IY8HhDLbJGfHLL8GhaUicw",
         "name":"Starbucks",
-        "review_count":53,
+        "review_count":52,
         "rating":2.5,
         "price":"$$",
         "price_point":2,
@@ -452,7 +452,7 @@
     {
         "id":"iWoOAvIYqZ8nqx1BYcuZYw",
         "name":"Starbucks",
-        "review_count":26,
+        "review_count":27,
         "rating":3.0,
         "price":"$",
         "price_point":1,
@@ -920,7 +920,7 @@
     {
         "id":"pTZp1Lhdptd9b2HnIej6dg",
         "name":"Starbucks",
-        "review_count":68,
+        "review_count":67,
         "rating":2.5,
         "price":"$$",
         "price_point":2,
@@ -1010,7 +1010,7 @@
     {
         "id":"lNY8FMxryObIJDo-06OVlg",
         "name":"Starbucks",
-        "review_count":168,
+        "review_count":167,
         "rating":2.5,
         "price":"$$",
         "price_point":2,
@@ -1118,7 +1118,7 @@
     {
         "id":"TF18eL-pz9xNCIR0Oz2SQA",
         "name":"Starbucks",
-        "review_count":41,
+        "review_count":42,
         "rating":3.0,
         "price":"$$",
         "price_point":2,
@@ -2162,7 +2162,7 @@
     {
         "id":"__OxnxuxnxJi8-xgYEwFhw",
         "name":"Starbucks",
-        "review_count":74,
+        "review_count":73,
         "rating":2.5,
         "price":"$$",
         "price_point":2,
@@ -3278,7 +3278,7 @@
     {
         "id":"4RRaroFBdXjQTS_1_7FDsg",
         "name":"Gregorys Coffee",
-        "review_count":160,
+        "review_count":161,
         "rating":4.0,
         "price":"$$",
         "price_point":2,
@@ -3492,22 +3492,22 @@
         "longitude":-73.98755
     },
     {
-        "id":"WP78R4bbejX29FZmObdLAw",
+        "id":"8M-V3CdbywU1pXIhaROIoQ",
         "name":"Gregorys Coffee",
-        "review_count":13,
-        "rating":3.5,
+        "review_count":48,
+        "rating":3.0,
         "price":"",
         "price_point":0,
-        "display_phone":"(877) 292-3548",
-        "address1":"200 Varick St",
+        "display_phone":"(877) 216-1724",
+        "address1":"122 E 42nd St",
         "address2":"",
         "address3":"",
         "city":"New York",
         "state":"NY",
-        "zip":"10014",
+        "zip":"10168",
         "country":"US",
-        "latitude":40.728,
-        "longitude":-74.00521
+        "latitude":40.75144,
+        "longitude":-73.97646
     },
     {
         "id":"ejZjFbR_Z3He5pi699eJKg",
@@ -3697,14 +3697,14 @@
         "price":"",
         "price_point":0,
         "display_phone":"(212) 686-1444",
-        "address1":"240 E 54th St",
+        "address1":"984 6th Ave",
         "address2":"",
         "address3":"",
         "city":"New York",
         "state":"NY",
-        "zip":"10022",
+        "zip":"10018",
         "country":"US",
-        "latitude":40.7574700633,
-        "longitude":-73.9674983309
+        "latitude":40.7513327399,
+        "longitude":-73.9863093
     }
 ]

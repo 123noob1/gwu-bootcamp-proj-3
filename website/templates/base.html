@@ -33,7 +33,7 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body style="background-color: rgb(238, 238, 238);">
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom border-body" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom border-primary" style="background-color: #e3f2fd;">
             <div class="container-fluid">
                 <button 
                     class="navbar-toggler" 
@@ -49,16 +49,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarProject">
                     <div class="navbar-nav">
-                        <a class="nav-link active p-2 text-body-primary" aria-current="page" href="/">Home</a>
-                        <a class="nav-link active p-2 text-body-primary" aria-current="page" href="/map">Map</a>
+                        <a class="nav-link p-2 text-body-primary" aria-current="page" href="/">Home</a>
+                        <a class="nav-link p-2 text-body-primary" aria-current="page" href="/map">Map</a>
                     </div>
                 </div>
             </div>
         </nav>
 
         <div 
-            class="container-lg" 
-            style="margin-top: 10px; background-color: white; border-radius: 10px; border: 1px solid rgb(206, 206, 206);">
+            class="container-lg border border-body border-info rounded" 
+            style="margin-top: 10px; background-color: white;">
             {% block content %}
             {% endblock %}
         </div>

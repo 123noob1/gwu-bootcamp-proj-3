@@ -10,7 +10,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # API key
-website\jupyter\api_key.py
+website/jupyter/api_key.py
 api_key.py
 
 # Distribution / packaging
