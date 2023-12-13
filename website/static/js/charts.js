@@ -58,7 +58,182 @@ function setShopInfo(shopName) {
 // Function for plotting the charts
 function setPlots(shopName) {
     // Codes go here
+    dataPromiseChart.then(data => {
+        // Get current selected shop return in a descending order based on review count
+        let shopSorted = data.filter((item, index) => {
+                if (item.name.toString() === shopName) {
+                    let sortByReviewCount = data.sort((x, y) => { return y.review_count - x.review_count });
+                    return sortByReviewCount;
+                };
+            });
+        
+        // Resort one more time since some shops didn't sort correctly the first time
+        shopSorted = shopSorted.sort((x, y) => { return y.review_count - x.review_count });
 
+        // Set up the HBar to display top 10 based on review counts for the seleted shop
+        let yValues = shopSorted.slice(0, 10).map(v => v.id);
+        let shopLabels = shopSorted.slice(0, 10).map(v => {
+            let label = '<b>Address:</b><br>   ' + v.address1 + ' ' + v.address2 + ' ' + v.address3 + '<br>   ' + v.city + ', ' + v.state + ' ' + v.zip + '<br>' +
+                        '<b>Phone Number:</b> ' + v.display_phone + '<br>' +
+                        '<b>Price:</b> ' + v.price
+            return label;
+        });
+
+        // Set up the review count
+        let barReviewCount = {
+            x: yValues,
+            y: shopSorted.slice(0, 10).map(v => v.review_count),
+            name: 'Review Count',
+            text: shopLabels,
+            type: 'bar',
+            marker: { color: 'rgba(55, 128, 191, 1)' }
+        };
+
+        // Set up the rating
+        let barRatingCount = {
+            x: yValues,
+            y: shopSorted.slice(0, 10).map(v => v.rating),
+            yaxis: 'y2',
+            name: 'Rating',
+            type: 'bar',
+            marker: { color: 'rgba(255, 0, 0, 0.5)' }
+        };
+
+        // Group the traces
+        let barGroup1 = [barReviewCount, barRatingCount];
+
+        // Set the layout for the HBar chart
+        let layout1 = {
+            title: {
+                text: '<b>Top 10 ' + shopName + ' Shops with Review Counts and Ratings</b>',
+                xref: 'paper',
+                font: { size: 14 }
+            },
+            hoverlabel: { align: 'left' },
+            xaxis: { 
+                showticklabels: true,
+                tickfont: {
+                  size: 9
+                },
+            },
+            yaxis: {
+                mirrow: true,
+                side: 'left'
+            },
+            yaxis2: { 
+                side: 'right',
+                range: [0, 5],
+                overlaying: 'y',
+                showgrid: true
+            },
+            showlegend: true,
+            legend: { 
+                orientation: 'h',
+                y: 1,
+                x: 0.25,
+                bgcolor: 'rgba(255, 255, 255, .5)',
+                font: { size: 12 }
+            },
+            margin: {
+                t: 50,
+                pad: 4
+            }
+        };
+
+        // Plot the first chart
+        Plotly.newPlot('bar1', barGroup1, layout1, {displayModeBar: false});
+
+        // Set up a bar chart to show all shops with the main selected shop colorized        
+        let shopStatistic = {};
+        let shopNames = [];
+        let shopTotalReviewCount = [];
+        let shopAvgRating = [];
+        let ReviewCountColor = [];
+        let AvgRatingColor = [];
+
+        // Get total review counts by each shop by aggregation
+        data.forEach(function(d) {
+            if (shopStatistic.hasOwnProperty(d.name)) {
+                shopStatistic[d.name] = [
+                    shopStatistic[d.name][0] + d.review_count,
+                    shopStatistic[d.name][1] + d.rating,
+                    shopStatistic[d.name][2] + 1
+                ];
+            } else {
+                shopStatistic[d.name] = [
+                    d.review_count,
+                    d.rating,
+                    1
+                ];
+            };
+        });
+
+        // Loop through the shopStatistic to assign the x (shop name), y1 (total review count), and y2 (average rating) values
+        for (key in shopStatistic) {
+            shopNames.push(key);
+            shopTotalReviewCount.push(shopStatistic[key][0]);
+            shopAvgRating.push(Math.round((shopStatistic[key][1] / shopStatistic[key][2])*10)/10);
+        };
+
+        // Define custom alpha where the selected shop will be 1 while the rest 0.5 (adjust accordingly)
+        for (i in shopNames) {
+            if (shopNames[i] == shopName) {
+                AvgRatingColor.push('rgba(255, 0, 0, .5)')
+                ReviewCountColor.push('rgba(55, 128, 191, 1)')
+            } else {
+                AvgRatingColor.push('rgba(255, 0, 0, 0.15)')
+                ReviewCountColor.push('rgba(55, 128, 191, .15)')
+            };
+        };
+
+        let barTotalReviewCount = {
+            x: shopNames,
+            y: shopTotalReviewCount,
+            type: 'bar',
+            text: shopTotalReviewCount.map(String),
+            textposition: 'auto',
+            hoverinfo: 'none',
+            marker: { color: ReviewCountColor }
+        };
+
+        let barTotalRatingCount = {
+            x: shopNames,
+            y: shopAvgRating,
+            yaxis: 'y2',
+            type: 'bar',
+            text: shopAvgRating.map(String),
+            textposition: 'auto',
+            hoverinfo: 'none',
+            marker: { color: AvgRatingColor }
+        };
+
+        let barGroup2 = [barTotalReviewCount, barTotalRatingCount];
+
+        let layout2 = {
+            showlegend: false,
+            yaxis: {
+                mirrow: true,
+                side: 'left'
+            },
+            yaxis2: { 
+                side: 'right',
+                range: [0, 5],
+                overlaying: 'y',
+                showgrid: true
+            },
+            title: {
+                text: '<b>Review Counts and Rating by Coffee Chain</b>',
+                xref: 'paper',
+                font: { size: 14 }
+            },
+            margin: { 
+                t: 50,
+                pad: 4 
+            }
+        };
+
+        Plotly.newPlot('bar2', barGroup2, layout2, {displayModeBar: false});
+    });
 };
 
 // When the dropdown selection changes
