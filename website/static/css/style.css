@@ -1,0 +1,28 @@
+html,
+body,
+
+#bar1 {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#bar2 {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map-1 {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map-2 {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}

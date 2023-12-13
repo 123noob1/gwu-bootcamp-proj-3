@@ -1,15 +1,18 @@
 {% extends "base.html" %}
+{% block head %}
+
+<!-- Icons -->
+<script src="static/js/leaflet.extra-markers.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css">
+{% endblock %}
+
 {% block title %}Map View{% endblock %}
 
 {% block content %}
-<div 
-    class="container-fluid"
-    style="margin-top: 10px; background-color: white;"
->
-    <div class="map"></div>
-</div>
+    <div id="map-2"></div>
 {% endblock %}
 
 {% block scripts %}
-    <script type="text/javascript" src="../static/js/map.js"></script>
+    <script type="text/javascript" src="../static/js/map-view.js"></script>
 {% endblock %}

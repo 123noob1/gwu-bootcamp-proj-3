@@ -30,13 +30,17 @@
             crossorigin="anonymous"
         />
         
+        <!-- Our style css/js for mapping -->
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+        {% block head %}{% endblock %}
+
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body style="background-color: rgb(238, 238, 238);">
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom border-primary" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom border-primary sticky-top" style="background-color: #e3f2fd;">
             <div class="container-fluid">
                 <button 
-                    class="navbar-toggler" 
+                    class="navbar-toggler btn-primary" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#navbarProject" 
@@ -45,12 +49,23 @@
                     aria-label="Toggle navigation"
                 >
                     <span class="navbar-toggler-icon glyphicon glyphicon-option-vertical"></span>
-                    <a class="navbar-brand mb-0 h1 p-2 text-body-primary" href="#">PROJECT 3</a>
+                    <a class="navbar-brand mb-0 h1 p-2 navbar-dark" href="#">PROJECT 3</a>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarProject">
+                    <br/>
                     <div class="navbar-nav">
-                        <a class="nav-link p-2 text-body-primary" aria-current="page" href="/">Home</a>
-                        <a class="nav-link p-2 text-body-primary" aria-current="page" href="/map">Map</a>
+                        {% if result == 'Home' %}
+                            <a class="btn btn-primary btn-sm active" aria-pressed="true" href="#">Home</a>
+                        {% else %}
+                            <a class="btn btn-primary btn-sm" aria-pressed="false" href="/">Home</a>
+                        {% endif %}
+                        {% if result == 'Map' %}
+                            <a class="btn btn-primary btn-sm active" aria-pressed="true" href="#">Map View</a>
+                        {% else %}
+                            <a class="btn btn-primary btn-sm" aria-pressed="false" href="/map">Map View</a>
+                        {% endif %}
+                        <a class="btn btn-primary btn-sm" aria-pressed="false" href="/db-query" target="_blank">SQLite</a>
+                        <a class="btn btn-primary btn-sm" aria-pressed="false" href="/dataset/merged.json" target="_blank">JSON</a>
                     </div>
                 </div>
             </div>

@@ -7,15 +7,17 @@
     style="margin-top: 10px; background-color: white;"
 >
     <div class="row">
-        <div class="col-md-12 p-1 col-md-12 jumbotron text-center border-bottom border-info" style="background-color: #e3f2fd;">
-            <p><h1>Main Title Goes Here</h1></p>
+        <div class="col-lg-12 p-1 jumbotron text-center border-bottom border-info" style="background-color: #e3f2fd;">
+            <p><h1 class="text-body-primary" style="font-variant-caps: small-caps;text-shadow: 2px 2px #ff0000">Starbucks Versus Coffee Chains in NYC</h1></p>
+            <center><hr width="50%"></center>
+            <p><h4 class="text-body-secondary">Who will be the winner?</h4></p>
         </div>
     </div><br/>
     <div class="row">
-        <div class="col-md-2">  
+        <div class="col-lg-1" style="width: 200px;">  
             <div class="panel panel-primary border border-info rounded">
                 <div class="panel-heading" style="background-color: #e3f2fd;">
-                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold;padding: 10px; width: 100%;">Select a Coffee Chain</h6>
+                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold; font-size: small; padding: 5px; width: 100%;">Select a Coffee Chain</h6>
                 </div>
                 <center>
                     <select class="border" id="selDataset" onchange="optionChanged(this.value)" style="margin-bottom: 10px; font-size: small; text-align: center;"></select>
@@ -24,7 +26,7 @@
             <br/>
             <div class="panel panel-primary border border-info rounded">
                 <div class="panel-heading" style="background-color: #e3f2fd;">
-                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold; padding: 10px;">Overall Shop Info</h6>
+                    <h6 class="panel-title border-bottom border-info" align="center" style="font-weight: bold; font-size: small; padding: 5px;">Overall Shop Info</h6>
                 </div>
                 <table class="table table-hover table-borderless" style="font-size: small;">
                     <tr>
@@ -46,21 +48,21 @@
                 </table>
             </div>
         </div>
-        <div class="col-md-4" style="margin-left: 35px;">
+        <div class="col-lg-5" style="margin-left: 5px;">
             <div id="bar1"></div>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-4" style="margin-left: 35px;">
+        <div class="col-lg-5" style="margin-left: 5px;">
             <div id="bar2"></div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-lg-12">
             <hr/>
             <div class="row">
-                <div class="col-md-12" align="center">
-                    <div id="map1"></div>
+                <div class="col-lg-12" align="center" style="height: 500px; width: 100%;">
+                    <div id="map-1" class="border border-secondary rounded"></div>
                 </div>
-            </div>
+            </div>   
+            <div style="height: 10px;"></div>
         </div>
     </div>
 </div>
@@ -69,7 +71,7 @@
     class="container-lg border border-body border-primary rounded text-center text-muted" 
     style="margin-top: 10px; padding: 5px; font-size: small; background-color: white;"
 >
-    Project 3 Team - 
+    Team Hope - 
     <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/drkrenn" target="_blank">
         Dan Krenn
     </a> | 
@@ -87,5 +89,5 @@
 
 {% block scripts %}
     <script type="text/javascript" src="../static/js/charts.js"></script>
-    <script type="text/javascript" src="../static/js/map.js"></script>
+    <script type="text/javascript" src="../static/js/map-main.js"></script>    
 {% endblock %}

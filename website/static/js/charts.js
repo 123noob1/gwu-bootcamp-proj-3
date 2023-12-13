@@ -1,6 +1,5 @@
 // Promise pending
-const dataPromise = d3.json(data, d3.autoType);
-console.log(dataPromise);
+const dataPromiseChart = d3.json(data, d3.autoType);
 
 // Setup the Overall Shop Info
 function setShopInfo(shopName) {
@@ -16,8 +15,8 @@ function setShopInfo(shopName) {
     rowAverageRating.text('');
     rowAveragePrice.text('');
 
-    // Using json object dataPromise to populate the shop chain info in the shop information section
-    dataPromise.then(data => {
+    // Using json object dataPromiseChart to populate the shop chain info in the shop information section
+    dataPromiseChart.then(data => {
         let totalShop = 0;
         let totalReview = 0;
         let avgRating = 0.0;
@@ -59,12 +58,17 @@ function setShopInfo(shopName) {
 // Function for plotting the charts
 function setPlots(shopName) {
     // Codes go here
+
 };
 
 // When the dropdown selection changes
 function optionChanged(shopName) {
     setShopInfo(shopName);
-    // setPlots(shopName);
+    setPlots(shopName);
+
+    // We're able to call this function from the map-main.js since the index.html is connecting
+    // these js files together
+    setMapByShop(shopName);
 };
 
 // Starter/init function
@@ -72,8 +76,8 @@ function init() {
     // Set the dropdown list then append the unique names of the chain coffee shops
     let selMenu = d3.select('#selDataset');
 
-    // Using json object dataPromise to populate the item values for sample Id
-    dataPromise.then(data => {
+    // Using json object dataPromiseChart to populate the item values for sample Id
+    dataPromiseChart.then(data => {
         let names = [];
         
         // Loop through each index of the list and return only unique value for the name of the shop

@@ -7,12 +7,14 @@ views = Blueprint('views', __name__)
 # Main starting route
 @views.route('/')
 def main():
-    return render_template('index.html')
+    current_page = 'Home'
+    return render_template('index.html', result = current_page)
 
 # Route for map view page
 @views.route('/map')
 def map_page():
-    return render_template('map.html')
+    current_page = 'Map'
+    return render_template('map.html', result = current_page)
 
 # Route for json file with method GET (for practice explicitly indicating here otherwise GET is the default method)
 @views.route('/dataset/merged.json', methods = ['GET'])
@@ -21,7 +23,7 @@ def get_data_json():
     import json
 
     # Open and read the file before returning it
-    with open('website\static\dataset\merged.json', 'r') as f:
+    with open('website/static/dataset/merged.json', 'r') as f:
         data = json.load(f)
         return data
     
@@ -34,14 +36,14 @@ def get_db_result():
     import pandas as pd
 
     # Db path and query to pull data from
-    db = 'website\coffee_chains.sqlite'
+    db = 'website/coffee_chains.sqlite'
 
     # Create the engine and connection to the database
     engine = create_engine(f'sqlite:///{db}')
     conn = engine.connect()
 
     # Query all the data from the shop table in the database
-    data = pd.read_sql('SELECT * FROM shops', conn).to_json(orient = 'records')
+    data = pd.read_sql('SELECT * FROM shops', conn).to_json(orient = 'records', indent = 4)
     
     # Close out of the engine
     engine.dispose()
