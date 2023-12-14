@@ -129,7 +129,7 @@ function setPlots(shopName) {
             showlegend: true,
             legend: { 
                 orientation: 'h',
-                y: 1,
+                y: 1.15,
                 x: 0.25,
                 bgcolor: 'rgba(255, 255, 255, .5)',
                 font: { size: 12 }
@@ -148,8 +148,8 @@ function setPlots(shopName) {
         let shopNames = [];
         let shopTotalReviewCount = [];
         let shopAvgRating = [];
-        let ReviewCountColor = [];
-        let AvgRatingColor = [];
+        let reviewCountColor = [];
+        let avgRatingColor = [];
 
         // Get total review counts by each shop by aggregation
         data.forEach(function(d) {
@@ -178,11 +178,11 @@ function setPlots(shopName) {
         // Define custom alpha where the selected shop will be 1 while the rest 0.5 (adjust accordingly)
         for (i in shopNames) {
             if (shopNames[i] == shopName) {
-                AvgRatingColor.push('rgba(255, 0, 0, .5)')
-                ReviewCountColor.push('rgba(55, 128, 191, 1)')
+                avgRatingColor.push('rgba(255, 0, 0, .5)')
+                reviewCountColor.push('rgba(55, 128, 191, 1)')
             } else {
-                AvgRatingColor.push('rgba(255, 0, 0, 0.15)')
-                ReviewCountColor.push('rgba(55, 128, 191, .15)')
+                avgRatingColor.push('rgba(255, 0, 0, 0.15)')
+                reviewCountColor.push('rgba(55, 128, 191, .15)')
             };
         };
 
@@ -190,10 +190,11 @@ function setPlots(shopName) {
             x: shopNames,
             y: shopTotalReviewCount,
             type: 'bar',
+            name: 'Review Counts',
             text: shopTotalReviewCount.map(String),
             textposition: 'auto',
             hoverinfo: 'none',
-            marker: { color: ReviewCountColor }
+            marker: { color: reviewCountColor }
         };
 
         let barTotalRatingCount = {
@@ -201,16 +202,24 @@ function setPlots(shopName) {
             y: shopAvgRating,
             yaxis: 'y2',
             type: 'bar',
+            name: 'Average Rating',
             text: shopAvgRating.map(String),
             textposition: 'auto',
             hoverinfo: 'none',
-            marker: { color: AvgRatingColor }
+            marker: { color: avgRatingColor }
         };
 
         let barGroup2 = [barTotalReviewCount, barTotalRatingCount];
 
         let layout2 = {
-            showlegend: false,
+            showlegend: true,
+            legend: { 
+                orientation: 'h',
+                y: 1.15,
+                x: 0.15,
+                bgcolor: 'rgba(255, 255, 255, .5)',
+                font: { size: 12 }
+            },
             yaxis: {
                 mirrow: true,
                 side: 'left'
@@ -222,7 +231,7 @@ function setPlots(shopName) {
                 showgrid: true
             },
             title: {
-                text: '<b>Review Counts and Rating by Coffee Chain</b>',
+                text: '<b>Review Counts and Average Rating by Coffee Chain</b>',
                 xref: 'paper',
                 font: { size: 14 }
             },
