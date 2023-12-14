@@ -3,11 +3,11 @@
 ![Alt text](screenshots/home-view.png)
 
 ## Project Goals:
-The goal of the present project is to generate a website that allows for the comparison of coffee shop chains in New York City. Specifically, we aim to examine the price point and ratings of 5 coffee shop chains located around NYC and aim to discover how they differ from corporate giant Starbucks and/or Dunkin' Donuts on those metrics.
+The goal of the present project is to generate a website that allows for the comparison of coffee shop chains in New York City. Specifically, we aim to examine the price point and ratings of 4 coffee shop chains located around NYC and aim to discover how they differ from corporate giant Starbucks, Dunkin' Donuts, and Tim Hortons on those metrics.
 
 Our specific data questions include:
-1. Is there a connection between price point and ratings of the 5 largest coffee shop chains in New York City?
-2. How do the other larger chains compare to Starbucks and/or Dunkin' Donuts in terms of rating and price point?
+1. Is there a connection between price point and ratings of the 7 largest coffee shop chains in New York City?
+2. How do the other larger chains compare to Starbucks, Dunkin' Donuts, and Tim Hortons in terms of rating and price point?
 
 ### Running The App:
 1) Using <code>Git Bash</code> or any other terminal navigate to where the repo is cloned. Once inside the repo main folder, type <code>python main.py</code> to start the app.
@@ -27,7 +27,7 @@ api_key = '<API KEY>'
 ``` 
 
 ## Data Sources Files:
-This data was collected from the Yelp API. Specifically, we examined the following 7 coffee chains:
+This data was collected from the Yelp API. Specifically, we examined the following 5 coffee chains:
 - Starbucks
 - Dunkin' Donuts
 - Tim Hortons
@@ -35,6 +35,8 @@ This data was collected from the Yelp API. Specifically, we examined the followi
 - Birch Coffee
 - Joe Coffee
 - Gregory's Coffee
+
+<b>Notes:</b> Even though the dataset for this app only uses the coffee chain shops listed above, you can however add more shops or remove them by adjusting the <code>coffee_chains</code> object variable in the <code>etl.jpynb</code> file. This will update the database along with the <code>json</code> and <coce>csv</code> files that will reflect in the app when run.
 
 ## Data Extraction & Cleaning: 
 - We developed a function to extract data in 50 coffeeshop blocks (taking into consideration the Yelp API limit of 50 restaurants per call).
