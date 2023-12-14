@@ -54,6 +54,7 @@ and review counts.
 An examination of the map not surprisingly reveals that Starbucks is overwhelmingly the most commonly rated coffee shop. 
 The next two most common are Gregory's Coffee and Think Coffee. 
 There were notably less ratings for Dunkin, Tim Hortons, Birch Coffee, and Joe Coffee.
+Surprisingly, Dunkin Donuts and Tim Hortons, which were added as comparisons, showed very minimal data. 
 
 An examination of the price point data reveals that Gregory's Coffee and Think Coffee were rated as more expensive than the other coffee chains.
 
