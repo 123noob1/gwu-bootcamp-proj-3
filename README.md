@@ -36,7 +36,7 @@ This data was collected from the Yelp API. Specifically, we examined the followi
 - Joe Coffee
 - Gregory's Coffee
 
-<b>Notes:</b> Even though the dataset for this app only uses the coffee chain shops listed above, you can however add more shops or remove them by adjusting the <code>coffee_chains</code> object variable in the <code>etl.jpynb</code> file. This will update the database along with the <code>json</code> and <coce>csv</code> files that will reflect in the app when run.
+<b>Notes:</b> Even though the dataset for this app only uses the coffee chain shops listed above, you can however add more shops or remove them by adjusting the <code>coffee_chains</code> object variable in the <code>etl.jpynb</code> file. This will update the database along with the <code>json</code> and <code>csv</code> files that will reflect in the app when run.
 
 ## Data Extraction & Cleaning: 
 - We developed a function to extract data in 50 coffeeshop blocks (taking into consideration the Yelp API limit of 50 restaurants per call).
