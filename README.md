@@ -19,7 +19,7 @@ python main.py
 ### Pre-requisites:
 1) Run the following command from within your terminal to install the required Python libraries used for this app and data extraction.
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```  
 2) Copy and paste your API Key from <a href="https://www.yelp.com/developers/v3/manage_app">Yelp API</a> into the <code>api_key.py</code> file located in <code>website/jupyter/</code>. This is needed if you need to re-run the data extraction in the <code>etl.jpynb</code>.
    Refer to <a href="https://docs.developer.yelp.com/docs/fusion-intro">Yelp Fusion API</a> documentation on how to set up the API key.
