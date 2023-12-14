@@ -1,7 +1,5 @@
 ## NYC Coffee Shops Comparison
-
 ![Alt text](screenshots/home-view.png)
-
 ## Project Goals:
 The goal of the present project is to generate a website that allows for the comparison of coffee shop chains in New York City. Specifically, we aim to examine the price point and ratings of 4 coffee shop chains located around NYC and aim to discover how they differ from corporate giant Starbucks, Dunkin' Donuts, and Tim Hortons on those metrics.
 
@@ -61,7 +59,7 @@ The following products were developed for the web page:
   
 - From Map View page:
    - A full-size map showing all coffee shops with each one being toggleable and having markers showing shop name, address, phone number, price point, and rating.
-  
+   ![Alt text](screenshots/map-view.png)
 - From SQLite Viewer page:
    - Opens up a new page/tab showing the extracted data from the ETL process into the SQLite database.
 
