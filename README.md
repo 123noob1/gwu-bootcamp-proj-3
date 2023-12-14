@@ -53,20 +53,20 @@ These data sources are stored in <code>SQLite database</code> (the choice of the
 ## Products Developed:
 The following products were developed for the web page:
 
-From Home page:
-- A map of coffee shops for the 5 chains with the ability to filter on chain name, price point, 
+- From Home page:
+   - A map of coffee shops for the 5 chains with the ability to filter on chain name, price point, 
 and review counts. 
-- A bar Chart for price point comparisons among 5 coffee chains.
-- A bar Chart for average rating comparisons among 5 coffee chains.
+   - A bar Chart for price point comparisons among 5 coffee chains.
+   - A bar Chart for average rating comparisons among 5 coffee chains.
   
-From Map View page:
-- A full-size map showing all coffee shops with each one being toggleable.
+- From Map View page:
+   - A full-size map showing all coffee shops with each one being toggleable.
   
-From SQLite Viewer page:
-- Opens up a new page/tab showing the extracted data from the etl process into the SQLite database.
+- From SQLite Viewer page:
+   - Opens up a new page/tab showing the extracted data from the etl process into the SQLite database.
 
-From JSON Viewer page:
-- Opens up a new page/tab showing the extracted data from the etl process exported into a json file format.
+- From JSON Viewer page:
+   - Opens up a new page/tab showing the extracted data from the etl process exported into a json file format.
 
 ## Findings:
 
