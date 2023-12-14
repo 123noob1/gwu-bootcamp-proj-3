@@ -104,3 +104,4 @@ However, our graph interpretations suggest that Starbucks, the most commonly lis
 - https://github.com/Yelp/yelp-fusion/blob/master/fusion/python/sample.py - for examples using API calling from Yelp
 - https://plotly.com/javascript/ - for chartings
 - https://leafletjs.com/ - for mapping
+- https://docs.developer.yelp.com/docs/fusion-intro - for the datasets
