@@ -77,7 +77,7 @@ Surprisingly, Dunkin Donuts and Tim Hortons, which were added as comparisons, sh
 
 An examination of the price point data reveals that Gregory's Coffee and Think Coffee were rated as more expensive than the other coffee chains.
 
-An examination of the rating bar chart reveals provided some interesting findings. Setting aside brands with less than 50 ratings, Starbucks and Birch Coffee were rated higher than Gregory's Coffee and Think Coffee. 
+An examination of the rating bar chart reveals provided some interesting findings. Setting aside brands with less than 50 ratings,  Birch Coffee was rated highest compared to Starbucks, Gregory's Coffee, and Think Coffee. And surprisingly Starbucks was rated lowest of the chains. 
 
 To specifically address our first question, we compared the chains that were rated highly to the chains that showed the highest perceived price points. 
 There is no obvious relationship between price point perceptions and ratings. However, an argument could be made to look at this trend without Starbucks given the visibility and marketing of that brand compared to others. 
