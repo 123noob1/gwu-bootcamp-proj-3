@@ -27,7 +27,7 @@ api_key = '<API KEY>'
 ``` 
 
 ## Data Sources Files:
-This data was collected from the Yelp API. Specifically, we examined the following 5 coffee chains:
+This data was collected from the Yelp API. Specifically, we examined the following 7 coffee chains:
 - Starbucks
 - Dunkin' Donuts
 - Tim Hortons
@@ -37,7 +37,11 @@ This data was collected from the Yelp API. Specifically, we examined the followi
 - Gregory's Coffee
 
 ## Data Extraction & Cleaning: 
-TBD
+- We developed a function to extract data in 50 coffeeshop blocks (taking into consideration the Yelp API limit of 50 restaurants per call).
+- In this function we pulled all the data in JSON format and transformed the data with the output of the function being a pandas data frame.
+- We placed the restaurants we needed to extract in a list.
+- After which we looped through this list allowing us to make 200 calls per restaurant. We then appended these restaurants into one final dataset.
+- This was then pushed to the SQL Lite server using SQL Alchemy.
 
 ## Products Developed:
 The following products were developed for the web page:
