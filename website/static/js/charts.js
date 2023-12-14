@@ -212,14 +212,7 @@ function setPlots(shopName) {
         let barGroup2 = [barTotalReviewCount, barTotalRatingCount];
 
         let layout2 = {
-            showlegend: true,
-            legend: { 
-                orientation: 'h',
-                y: 1.15,
-                x: 0.15,
-                bgcolor: 'rgba(255, 255, 255, .5)',
-                font: { size: 12 }
-            },
+            showlegend: false,
             yaxis: {
                 mirrow: true,
                 side: 'left'
