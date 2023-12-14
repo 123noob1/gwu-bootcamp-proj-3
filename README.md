@@ -1,5 +1,4 @@
-## NYC Coffee Shop Comparison
-Project 3
+## NYC Coffee Shops Comparison
 
 ![Alt text](screenshots/home-view.png)
 
