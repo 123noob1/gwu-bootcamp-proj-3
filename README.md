@@ -56,11 +56,11 @@ The following products were developed for the web page:<br/>
 - A map of coffee shops for the 5 chains with the ability to filter on chain name, price point, 
 and review counts. 
 - A bar Chart for price point comparisons among 5 coffee chains.
-- A bar Chart for average rating comparisons among 5 coffee chains.
+- A bar Chart for average rating comparisons among 5 coffee chains.<br/>
 <u>From Map View page</u>:<br/>
-- A full-size map showing all coffee shops with each one being toggleable.
+- A full-size map showing all coffee shops with each one being toggleable.<br/>
 <u>From SQLite Viewer page</u>:<br/>
-- Opens up a new page/tab showing the extracted data from the etl process into the SQLite database.
+- Opens up a new page/tab showing the extracted data from the etl process into the SQLite database.<br/>
 <u>From JSON Viewer page</u>:<br/>
 - Opens up a new page/tab showing the extracted data from the etl process exported into a json file format.
 
