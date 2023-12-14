@@ -59,7 +59,9 @@ The following products were developed for the web page:
   
 - From Map View page:
    - A full-size map showing all coffee shops with each one being toggleable and having markers showing shop name, address, phone number, price point, and rating.
-   ![Alt text](screenshots/map-view.png)
+   
+     ![Alt text](screenshots/map-view.png)
+     
 - From SQLite Viewer page:
    - Opens up a new page/tab showing the extracted data from the ETL process into the SQLite database.
 
