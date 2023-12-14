@@ -92,6 +92,13 @@ To examine the second question, we examined how price point and ratings differ b
 There's some limitation here given that none of the chains show drastically different price points to begin with.
 However, our graph interpretations suggest that Starbucks, the most commonly listed chain coffee shop, showed some of the lowest ratings, and was the lowest rated among chains with at least 50 reviews.
 
+## Tools Used:
+- Python
+- Jupyter Notebook
+- HTML
+- CSS
+- Javascript
+
 ## References:
 - https://www.youtube.com/watch?v=dam0GPOAvVI - for general guidance on building a website using Flask
 - https://github.com/Yelp/yelp-fusion/blob/master/fusion/python/sample.py - for examples using API calling from Yelp
