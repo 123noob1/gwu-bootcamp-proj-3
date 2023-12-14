@@ -44,13 +44,36 @@ function setMapByShop(shopName) {
                 // Remove excess spaces
                 popUpBuilder = popUpBuilder.replaceAll('  , ', ', ').replaceAll(' , ', ', ');
 
+                // Finish up the popup builder
+                popUpBuilder =  '<table class="table table-hover table-borderless leafpad" style="font-size: small;">' +
+                                    '<tr>' +
+                                        '<td style="width: 125px;"><b>Coffeeshop Name</b></td>' +
+                                        '<td><a href="' + d.url + '" target="_blank" title="Click to go to Yelp\'s page">' + d.name + '</a></td>' +
+                                    '<tr>' +
+                                    '<tr>' +
+                                        '<td><b>Address</b></td>' +
+                                        '<td>' + popUpBuilder + '</td>' +
+                                    '<tr>' +
+                                    '<tr>' +
+                                        '<td><b>Phone Number</b></td>' +
+                                        '<td>' + d.display_phone + '</td>' +
+                                    '<tr>' +
+                                    '<tr>' +
+                                        '<td><b>Price</b></td>' +
+                                        '<td>' + d.price + '</td>' +
+                                    '<tr>' +
+                                    '<tr>' +
+                                        '<td><b>Rating</b></td>' +
+                                        '<td>' + d.rating + '</td>' +
+                                    '<tr>' +
+                                    '<tr>' +
+                                        '<td><b>Review Counts</b></td>' +
+                                        '<td>' + d.review_count + '</td>' +
+                                    '<tr>' +
+                                '</table>'
+
                 // Append the marker into the markers list
-                markers.push(L.marker([d.latitude, d.longitude]).bindPopup(
-                    '<b>Coffeeshop Name:</b> ' + d.name + '<br>' +
-                    '<b>Address:</b> ' + popUpBuilder + '<br>' +
-                    '<b>Phone Number:</b> ' + d.display_phone + '<br>' +
-                    '<b>Price:</b> ' + d.price
-                ))                
+                markers.push(L.marker([d.latitude, d.longitude]).bindPopup(popUpBuilder))                
             };
         });
 

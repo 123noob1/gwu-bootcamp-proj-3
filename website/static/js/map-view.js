@@ -104,11 +104,33 @@ dataPromiseMap.then( data => {
         popUpBuilder = popUpBuilder.replaceAll('  , ', ', ').replaceAll(' , ', ', ');
 
         // Finish up the popup builder
-        popUpBuilder = '<b>Coffeeshop Name:</b> ' + d.name + '<br>' +
-                        '<b>Address:</b> ' + popUpBuilder + '<br>' +
-                        '<b>Phone Number:</b> ' + d.display_phone + '<br>' +
-                        '<b>Price:</b> ' + d.price + '<br>' +
-                        '<b>Rating:</b> ' + d.rating
+        popUpBuilder =  '<table class="table table-hover table-borderless leafpad" style="font-size: small;">' +
+                            '<tr><img src="' + d.image_url + '" class="imgcrop border rounded"></tr>' + 
+                            '<tr>' +
+                                '<td style="width: 125px;"><b>Coffeeshop Name</b></td>' +
+                                '<td><a href="' + d.url + '" target="_blank" title="Click to go to Yelp\'s page">' + d.name + '</a></td>' +
+                            '<tr>' +
+                            '<tr>' +
+                                '<td><b>Address</b></td>' +
+                                '<td>' + popUpBuilder + '</td>' +
+                            '<tr>' +
+                            '<tr>' +
+                                '<td><b>Phone Number</b></td>' +
+                                '<td>' + d.display_phone + '</td>' +
+                            '<tr>' +
+                            '<tr>' +
+                                '<td><b>Price</b></td>' +
+                                '<td>' + d.price + '</td>' +
+                            '<tr>' +
+                            '<tr>' +
+                                '<td><b>Rating</b></td>' +
+                                '<td>' + d.rating + '</td>' +
+                            '<tr>' +
+                            '<tr>' +
+                                '<td><b>Review Counts</b></td>' +
+                                '<td>' + d.review_count + '</td>' +
+                            '<tr>' +
+                        '</table>'
         
         let newMarker = L.marker([d.latitude, d.longitude], {icon: icons[d.name]});
         newMarker.addTo(layers[d.name]);

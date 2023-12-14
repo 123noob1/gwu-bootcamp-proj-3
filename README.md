@@ -28,7 +28,7 @@ api_key = '<API KEY>'
 ``` 
 
 ## Data Sources Files:
-This data was collected from the Yelp API. Specifically, we examined the following 5 coffee chains:
+This data was collected from the Yelp API. Specifically, we examined the following 7 coffee chains:
 - Starbucks
 - Dunkin' Donuts
 - Tim Hortons
@@ -42,7 +42,7 @@ These data sources are stored in <code>SQLite database</code> (the choice of the
 <b>Notes:</b> Even though the dataset for this app only uses the coffee chain shops listed above, you can however add more shops or remove them by adjusting the <code>coffee_chains</code> object variable in the <code>etl.jpynb</code> file. This will update the database along with the <code>json</code> and <code>csv</code> files that will reflect in the app when run.
 
 ## Extract, Transform, and Load (ETL) Process: 
-- We developed a function to extract data in 50 coffee shop blocks (taking into consideration the Yelp API limit of 50 restaurants per call).
+- We developed a function to extract data for coffee shops using offset of 200 and maximum radius of 40,000 (~25 miles) while taking into consideration the Yelp API limit of 50 restaurants per call.
 - In this function, we pulled all the data in JSON format and transformed the data with the output of the function being a pandas data frame.
 - We placed the restaurants we needed to extract in a list.
 - After which we looped through this list allowing us to make 200 calls per restaurant. We then appended these restaurants into one final dataset.
