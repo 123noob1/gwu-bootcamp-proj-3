@@ -118,9 +118,11 @@ function setPlots(shopName) {
             },
             yaxis: {
                 mirrow: true,
+                title: '<b>Review Count</b>',
                 side: 'left'
             },
             yaxis2: { 
+                title: '<b>Rating</b>',
                 side: 'right',
                 range: [0, 5],
                 overlaying: 'y',
@@ -214,10 +216,12 @@ function setPlots(shopName) {
         let layout2 = {
             showlegend: false,
             yaxis: {
+                title: '<b>Review Counts</b>',
                 mirrow: true,
                 side: 'left'
             },
             yaxis2: { 
+                title: '<b>Rating</b>',
                 side: 'right',
                 range: [0, 5],
                 overlaying: 'y',
@@ -230,7 +234,7 @@ function setPlots(shopName) {
             },
             margin: { 
                 t: 50,
-                pad: 4 
+                pad: 5
             }
         };
 
