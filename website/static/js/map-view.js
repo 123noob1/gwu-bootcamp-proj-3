@@ -182,7 +182,7 @@ function updateLegend(markerItems) {
         }
     };
 
-    document.querySelector('.legend').innerHTML = '<table class="table table-borderless leafpad" style="font-size: small; background-color: white;">' +
+    document.querySelector('.legend').innerHTML = '<table class="table table-hover table-borderless leafpad" style="font-size: small; background-color: white;">' +
                                                     '<tr class="border-bottom border-black"><b>Coffe Chain Shop Legends</b></tr><tr style="height:5px;"></tr>' + 
                                                     legendContainerList.join("") +
                                                     '</table>'
