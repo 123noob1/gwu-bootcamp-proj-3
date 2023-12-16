@@ -33,54 +33,63 @@ dataPromiseMap.then( data => {
             
             // Assign default 1-6 colors and whatever else added will be randomized
             if (!icons.hasOwnProperty(item.name)) {
-                console.log('inside create icon template by layer ' + item.name)
                 if (counter == 0) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'blue'
+                        markerColor: 'blue',
+                        shape: 'square'
                     });
                 } else if (counter == 1) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'red'
+                        markerColor: 'red',
+                        shape: 'square'
                     });
                 } else if (counter == 2) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'yellow'
+                        markerColor: 'yellow',
+                        shape: 'square'
                     });
                 } else if (counter == 3) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'orange'
+                        markerColor: 'orange-dark',
+                        shape: 'square'
                     });
                 } else if (counter == 4) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'black'
+                        markerColor: 'pink',
+                        shape: 'square'
                     });
                 } else if (counter == 5) {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markercolor: 'pink'
+                        markerColor: 'black',
+                        shape: 'square'
                     });
                 } else {
                     icons[item.name] = L.ExtraMarkers.icon({
                         icon: 'ion-coffee',
                         iconColor: 'white',
-                        markerColor: 'cyan'
+                        markerColor: 'cyan',
+                        shape: 'square'
                     });
                 };
                 counter += 1;
             };
         };
     });
+
+    console.log(layersList);
+    console.log(icons);
 
     // Create the map
     let map = L.map('map-2', {
@@ -166,24 +175,21 @@ function updateLegend(markerItems) {
     // Loop through the markerItems to generate the container list for showing in the legend
     for (i in markerItems) {
         if (i == 0) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: blue; color: white; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: #0047AB; color: white; text-indent: 0.2em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else if (i == 1) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: red; color: white; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: #9A2A2A; color: white; text-indent: 0.2em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else if (i == 2) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: yellow; color: black; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: yellow; color: black; text-indent: 0.2em; font-weight: bold;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else if (i == 3) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: orange; color: white; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: #d73e29; color: white; text-indent: 0.2em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else if (i == 4) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: black; color: white; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: #c057a0; color: white; text-indent: 0.2em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else if (i == 5) {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: pink; color: black; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:2px;"></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: black; color: white; text-indent: 0.2em;">☕ ' + markerItems[i] + '</td></tr><tr style="height:3px;"></tr>');
         } else {
-            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: cyan; color: black; text-indent: 1em;">☕ ' + markerItems[i] + '</td></tr>');
+            legendContainerList.push('<tr><td style="border-radius: 3px; background-color: cyan; color: black; text-indent: 0.2em; font-weight: bold;">☕ ' + markerItems[i] + '</td></tr>');
         }
     };
 
-    document.querySelector('.legend').innerHTML = '<table class="table table-hover table-borderless leafpad" style="font-size: small; background-color: white;">' +
-                                                    '<tr class="border-bottom border-black"><b>Coffe Chain Shop Legends</b></tr><tr style="height:5px;"></tr>' + 
-                                                    legendContainerList.join("") +
-                                                    '</table>'
+    document.querySelector('.legend').innerHTML = '<table class="table table-hover table-borderless leafpad" style="background-color: white; width: 150px;">' + legendContainerList.join("") + '</table>'
 }
