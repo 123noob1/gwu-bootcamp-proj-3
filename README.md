@@ -93,11 +93,11 @@ There's some limitation here given that none of the chains show drastically diff
 However, our graph interpretations suggest that Starbucks, the most commonly listed chain coffee shop, showed some of the lowest ratings, and was the lowest rated among chains with at least 50 reviews.
 
 ## Tools Used:
-- Python
+- Python (Flask, SQLAlchemy, jsonschema, requests, pandas)
 - Jupyter Notebook
 - HTML
-- CSS
-- Javascript
+- CSS (Bootstrap, Leaflet)
+- Javascript (Boostrap, Leaflet, Plotly)
 
 ## References:
 - https://www.youtube.com/watch?v=dam0GPOAvVI - for general guidance on building a website using Flask
