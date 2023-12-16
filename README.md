@@ -37,7 +37,15 @@ This data was collected from the Yelp API. Specifically, we examined the followi
 - Joe Coffee
 - Gregory's Coffee
 
-These data sources are stored in <code>SQLite database</code> (the choice of the database used for this project) for data pulling and presenting in the main app.
+These data sources are stored in <code>SQLite database</code> (the choice of the database used for this project) for data pulling and presenting in the main app. However, the app can also be run by using the <code>JSON</code> file as well simply by uncommenting the option 1 under the <code>data.js</code>. Make sure to comment out the other option when not in use.
+```
+// Select one option below only by commenting out the one not using
+// Option 1 - Using the json file
+// const data = "../dataset/merged.json";
+
+// Option 2 - Using the db file
+const data = "/db-query";
+```
 
 <b>Notes:</b> Even though the dataset for this app only uses the coffee chain shops listed above, you can however add more shops or remove them by adjusting the <code>coffee_chains</code> object variable in the <code>etl.jpynb</code> file. This will update the database along with the <code>json</code> and <code>csv</code> files that will reflect in the app when run.
 
