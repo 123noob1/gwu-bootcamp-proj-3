@@ -59,13 +59,13 @@ const data = "/db-query";
 ## Products Developed:
 The following products were developed for the web page:
 
-- From the Home page:
+- From the Home page ![Alt text](screenshots/nav-home.png)
    - A map of coffee shops for the selected shop with popup markers showing the shop name, address, phone number, and price point.
    - A bar Chart showing the top 10 shops with review counts and ratings for the selected shop.
    - A bar Chart for average rating and total review counts comparisons among all coffee chains within the dataset.
    - A table showing the overall information for selected coffee chain shops.
   
-- From Map View page:
+- From Map View page ![Alt text](screenshots/nav-map-view.png)
    - A full-size map showing all coffee shops with each one being toggleable and having markers showing shop name, address, phone number, price point, and rating.
    
      ![Alt text](screenshots/map-view.png)
