@@ -79,26 +79,22 @@ The following products were developed for the web page:
 ## Findings:
 
 An examination of the map not surprisingly reveals that Starbucks is overwhelmingly the most commonly rated coffee shop. 
-The next two most common are Gregory's Coffee and Think Coffee. 
-There were notably fewer ratings for Dunkin, Tim Hortons, Birch Coffee, and Joe Coffee.
-Surprisingly, Dunkin Donuts and Tim Hortons, which were added as comparisons, showed very minimal data. 
+The next three most common are Gregory's Coffee, Think Coffee, and Birch Coffee. 
+There were notably fewer ratings for Dunkin, Tim Hortons, and Joe Coffee.
+Surprisingly, Dunkin Donuts and Tim Hortons, which were added as comparisons due to their brand size and visability nationwide, showed very minimal data. 
 
 An examination of the price point data reveals that Gregory's Coffee and Think Coffee were rated as more expensive than the other coffee chains.
 
-An examination of the rating bar chart reveals provided some interesting findings. Setting aside brands with less than 50 ratings,  Birch Coffee was rated highest compared to Starbucks, Gregory's Coffee, and Think Coffee. And surprisingly Starbucks was rated lowest of the chains. 
+An examination of the rating bar chart reveals provided some interesting findings. Of the smaller chains, Joe Coffee was rated highest, and Think Coffee was rated lowest. Looking at the larger chains,  Tim Hortons had the highest rating, and Dunkin Donuts had the lowest. Generally speaking, the smaller chains outperformed the larger chains in terms of ratings. Only Think Cofee had a rating below a major chain. (Tim Hortons was rated 3.6, and Think Coffee was rated 3.5.) All the other small chains had average ratings above the major chains. 
 
 To specifically address our first question, we compared the chains that were rated highly to the chains that showed the highest perceived price points. 
-There is no obvious relationship between price point perceptions and ratings. However, an argument could be made to look at this trend without Starbucks given the visibility and marketing of that brand compared to others. 
-If you examine the non-Starbucks chains with at least 50 reviews, the chains that showed the lowest ratings were rated as having the highest price points. However, the explanation of why this trend exists needs more information.
-One plausible explanation is that people who had dissatisfying experiences left feeling that the coffee was overrated, leading to them pricing the coffee subjectively higher (satisfaction drove perceptions of price).
-An alternative explanation is that the coffee was legitimately more expensive, which led to a less satisfying experience (i.e., coffee price drove ratings). 
-There are also some limitations to this trend. 
-First, if you exclude Starbucks, there were only 3 usable coffee shop brands with at least 50 reviews. That provides enough data to loosely interpret a graph. 
+There is no obvious relationship between price point perceptions and ratings if you look across all of the chains. However, an examination of just the smaller chains did show an interesting pattern. Think Coffee and Gregory's Coffee, which both had a price point of $$, were the two lowest rated smaller coffee chains. However, this pattern did not continue if you included Starbucks and other larger chains. The explanation of why this trend exists needs more information. One plausible explanation is that people who had dissatisfying experiences left feeling that the coffee was overrated, leading to them pricing the coffee subjectively higher (satisfaction drove perceptions of price). An alternative explanation is that the coffee was legitimately more expensive, which led to a less satisfying experience (i.e., coffee price drove ratings). There are also some limitations to this trend.  
+First, if you exclude major coffee shops, there were only 4 usable coffee shop brands to compare. That provides enough data to loosely interpret a graph. 
 But there's insufficient data to tell if there's a statistically significant relationship between price and ratings.
 
 To examine the second question, we examined how price points and ratings differ between Starbucks and other chains. 
-There's some limitation here given that none of the chains show drastically different price points to begin with.
-However, our graph interpretations suggest that Starbucks, the most commonly listed chain coffee shop, showed some of the lowest ratings, and was the lowest rated among chains with at least 50 reviews.
+There's some limitation here given that none of the chains show drastically different price points to begin with (all chains have $ or $$ price points).
+However, our graph interpretations suggest that Starbucks, the most commonly listed chain coffee shop, showed some of the lowest ratings and only had Dunkin rated below them. 
 
 ## Tools Used:
 - Python (Flask, SQLAlchemy, jsonschema, requests, pandas)
